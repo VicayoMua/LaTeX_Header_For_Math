@@ -1,0 +1,100 @@
+\documentclass[11pt]{article} 
+
+\usepackage{amsmath,esint,amsfonts,amssymb} % Math and Fancy Math Libs
+\usepackage{graphicx,comment,pdfpages,changepage} % Content Controlling Libs
+\usepackage[hidelinks]{hyperref} % URL Hyper-Links
+
+\usepackage{tikz} % Math Graphing Lib
+%\usepackage{tikz-cd}
+\usetikzlibrary{arrows}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\setlength{\topmargin}{-2.5cm} 
+\setlength{\textwidth}{18cm} 
+\setlength{\textheight}{25.1cm} 
+\setlength{\baselineskip}{5ex} 
+\setlength{\oddsidemargin}{-1cm} 
+\setlength{\parsep}{3ex} 
+\setlength{\parskip}{2ex} 
+\setlength{\parindent}{0cm} 
+\pagenumbering{arabic}
+
+\usepackage{fancyhdr} % Fancy Header and Footer Libs
+%\pagestyle{empty} 
+\pagestyle{fancy} % Use the fancy style
+\fancyhf{} % Clear all headers and footers
+\fancyfoot[R]{\raisebox{12pt}{\fbox{Page \thepage}}} % Right-aligned boxed page number in the header
+\renewcommand{\headrulewidth}{0pt} % Completely remove the header line
+
+\usepackage{xcolor} % Color Defining Lib
+\definecolor{dblue}{RGB}{0,0,140} % customized color: dark blue 
+\definecolor{dred}{RGB}{200,0,0} % customized color: dark red 
+\definecolor{dgreen}{RGB}{0,140,0} % customized color: dark green
+
+\usepackage{listings}
+\lstset{ %
+	language=Python,
+	basicstyle=\ttfamily\footnotesize, % Set the font style and size
+	keywordstyle=\color{dblue}, % Color of keywords
+	commentstyle=\color{gray}, % Color of comments
+	stringstyle=\color{blue}, % Color of strings
+	numbers=left, % Line numbers on the left
+	numberstyle=\color{gray}, % Line number style
+	stepnumber=1, % The step between two line numbers
+	numbersep=10pt, % How far the line numbers are from the code
+	backgroundcolor=\color{white}, % Background color of the code block
+	frame=single, % Frame around the code block
+	breaklines=true, % Automatic line breaking
+	captionpos=b, % Caption position
+	tabsize=4, % Tab size
+}
+
+\begin{comment}
+	\lstset{ %
+		language=C++, % Set the language to C++
+		basicstyle=\ttfamily\small, % Set font style and size
+		keywordstyle=\color{dblue}\bfseries, % Color and bold style for keywords
+		commentstyle=\color{gray}\itshape, % Italic and gray for comments
+		stringstyle=\color{blue}, % Color for strings
+		numbers=left, % Line numbers on the left
+		numberstyle=\color{gray}, % Line number color
+		stepnumber=1, % Line number step
+		numbersep=10pt, % Line number separation
+		backgroundcolor=\color{bg}, % Light gray background
+		frame=single, % Frame around the block
+		breaklines=true, % Automatic line breaking
+		captionpos=b, % Caption position
+		tabsize=4, % Tab size
+		caption={Example C++ Code}, % Example caption
+		label={lst:example-cpp-code}, % Label for referencing
+		showstringspaces=false, % Hide string spaces
+		morekeywords={constexpr, nullptr, noexcept, override, final}, % Add modern C++ keywords
+	}
+\end{comment}
+
+\begin{document}
+	
+	\begin{center}
+		\framebox{
+			\vbox{
+				\vspace{2mm}
+				\hbox to 6.50in { {\bf Course Name/Number} \hfill Semester/Month Year }
+				\vspace{4mm}
+				\hbox to 6.50in { {\Large \hfill Title \hfill} }
+				\vspace{4mm}
+			}
+		}
+	\end{center}
+	
+	\tableofcontents
+	
+	\newpage
+	
+	\textit{Intentionally left blank} \newpage % blank page place holder
+	
+	% Begining of Your Texts !!!
+	
+	
+\end{document}
