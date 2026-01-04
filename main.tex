@@ -1,21 +1,54 @@
 \documentclass[11pt]{article} 
 
-\usepackage{amsmath,esint,amsfonts,amssymb} % Math and Fancy Math Libs
+\usepackage{amsmath,esint,amsfonts,amssymb,enumitem} % Math and Fancy Math Libs
+\newcommand{\Exval}{\mathrm{E}}
+\newcommand{\Prob}{\mathrm{P}}
+\newcommand{\Vari}{\mathrm{V}}
+\newcommand{\Covari}{\mathrm{Cov}}
+\newcommand{\sign}{\mathrm{sign}}
 \newcommand{\lcm}{\operatorname{lcm}}
 \newcommand{\modd}{\operatorname{mod}\,}
+\newcommand{\moddopr}{\,\operatorname{mod}\,}
 \newcommand{\moddnp}{\,(\modd n)}
 \newcommand{\moddNp}{\,(\modd N)}
 \newcommand{\moddmp}{\,(\modd m)}
 \newcommand{\moddMp}{\,(\modd M)}
 \newcommand{\moddpp}{\,(\modd p)}
-\newcommand{\moddqp}{\,(\modd q)}
 \newcommand{\moddap}{\,(\modd a)}
 \newcommand{\moddbp}{\,(\modd b)}
 \newcommand{\moddkp}{\,(\modd k)}
 \newcommand{\moddlp}{\,(\modd \ell)}
 
+\newcommand{\hsfive}{\hspace*{0.5in}}
+\newcommand{\hsten}{\hspace*{1.0in}}
+
+\newcommand{\vsfive}{\vspace*{0.5in}}
+\newcommand{\vsten}{\vspace*{1.0in}}
+
 \usepackage{graphicx,comment,pdfpages,changepage} % Content Controlling Libs
 \usepackage[hidelinks]{hyperref} % URL Hyper-Links
+
+\usepackage{xcolor} % Color Defining Lib
+\definecolor{dblue}{RGB}{0,0,140} % customized color: dark blue 
+\definecolor{dred}{RGB}{200,0,0} % customized color: dark red 
+\definecolor{dgreen}{RGB}{0,140,0} % customized color: dark green
+
+\usepackage[most]{tcolorbox}
+
+% A reusable "comment box" environment
+\newtcolorbox{commentbox}[1][]{
+	breakable,
+	enhanced,
+	colback=white,      % keep text/background normal
+	colframe=dblue,     % frame color
+	boxrule=0.9pt,      % frame thickness
+	arc=3mm,            % rounded corners
+	left=2mm,right=2mm,top=1.5mm,bottom=1.5mm,
+	boxsep=1.5mm,
+	fonttitle=\bfseries,
+	title=Comment,
+	#1
+}
 
 \usepackage{braket} % primarily for quantum kets and bras
 \usepackage{pifont} % Checkmarks (✓/✗)
@@ -45,11 +78,6 @@
 \fancyhf{} % Clear all headers and footers
 \fancyfoot[R]{\raisebox{12pt}{\fbox{Page \thepage}}} % Right-aligned boxed page number in the header
 \renewcommand{\headrulewidth}{0pt} % Completely remove the header line
-
-\usepackage{xcolor} % Color Defining Lib
-\definecolor{dblue}{RGB}{0,0,140} % customized color: dark blue 
-\definecolor{dred}{RGB}{200,0,0} % customized color: dark red 
-\definecolor{dgreen}{RGB}{0,140,0} % customized color: dark green
 
 \usepackage{listings}
 \lstset{ %
@@ -115,6 +143,7 @@
 	
 
 \end{document}
+
 
 
 
